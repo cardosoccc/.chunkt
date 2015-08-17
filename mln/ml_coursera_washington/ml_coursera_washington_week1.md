@@ -1,5 +1,7 @@
 # ml - coursera (washington) - week 1
 
+## introduction
+
 - definition of machine learning
     - automating automation
     - getting computers to program themselves
@@ -49,14 +51,6 @@
     - continuous: regression
     - probability: probability estimation
 
-- ml in practice
-    - understanding domain, prior knowledge and goals
-    - data integration, selection, cleaning, pre-processing
-    - learn models
-    - interpret results
-    - consolidate and deploy
-    - loop
-
 - two views of learning
     - learning is the removal of uncertainty
     - learning requires guessing a good, small hypothesis class
@@ -65,6 +59,8 @@
     - develop languages for expressing prior knowlegde
     - develop flexible hypothesis spaces
     - in either case, develop algorithms for finding an hypothesis that fits the data
+
+## key concepts
 
 - training examples
     - an example of the form <x, f(x)>
@@ -89,76 +85,87 @@
 - version space
     - the space of all hypothesis in hypothesis space that have not yet been ruled out by a training example
 
-- key issues in machine learning
+## framework for hypothesis spaces
+
+- size
+    
+    - fixed
+        - easier to understand
+
+    - variable
+        - more useful
+        - introduce the problem of overfitting
+
+- randomness
+
+    - deterministic
+        - examples are consistent or inconsistent
+
+    - stochastic
+        - examples are more likely or less likely
+
+- parameterization
+    
+    - discrete
+        - must be found with combinatorial search methods
+
+    - continuous
+        - continuous must be found by numerical seach methods
+
+    - mixed
+        - symbolic (discrete) and continuous
+
+- search procedure
+    
+    - direct computation
+        - solve for hypothesis directly
+    
+    - local search
+        - start with an initial hypothesis
+        - make small improvements
+        - until a local optimum
+    
+    - construtive search
+        - start with an empty hypothesis
+        - gradually add structure to it
+        - until a local optimum
+
+- timing
+
+    - eager
+        - analyze training data and construct an explicit hypothesis
+
+    - lazy
+        - store training data util test data point is presented
+        - construct ad-hoc hypothesis to classifiy that data point
+
+- online vs. batch
+
+    - for eager algorithms
+
+    - online
+        - analyze each training example as presented
+
+    - batch
+        - collect training examples
+        - analyze them
+        - output hypothesis
+
+
+## ml in practice
+
+- pipeline
+    - understanding domain, prior knowledge and goals
+    - data integration, selection, cleaning, pre-processing
+    - learn models
+    - interpret results
+    - consolidate and deploy
+    - loop
+
+- key issues
     - what are good hypothesis spaces
     - what algorithms can work with these spaces
     - how optimize accuracy on future data points (overfitting)
     - how can we have confidence in the results (statistical question)
     - are some problems computationally intractable (computational question)
     - how can we formulate problems as ml problems (engineering question)
-
-- framework for hypothesis spaces
-    
-    - size
-        
-        - fixed
-            - easier to understand
-
-        - variable
-            - more useful
-            - introduce the problem of overfitting
-    
-    - randomness
-
-        - deterministic
-            - examples are consistent or inconsistent
-
-        - stochastic
-            - examples are more likely or less likely
-    
-    - parameterization
-        
-        - discrete
-            - must be found with combinatorial search methods
-
-        - continuous
-            - continuous must be found by numerical seach methods
-
-        - mixed
-            - symbolic (discrete) and continuous
-    
-    - search procedure
-        
-        - direct computation
-            - solve for hypothesis directly
-        
-        - local search
-            - start with an initial hypothesis
-            - make small improvements
-            - until a local optimum
-        
-        - construtive search
-            - start with an empty hypothesis
-            - gradually add structure to it
-            - until a local optimum
-    
-    - timing
-
-        - eager
-            - analyze training data and construct an explicit hypothesis
-
-        - lazy
-            - store training data util test data point is presented
-            - construct ad-hoc hypothesis to classifiy that data point
-    
-    - online vs. batch
-
-        - for eager algorithms
-
-        - online
-            - analyze each training example as presented
-
-        - batch
-            - collect training examples
-            - analyze them
-            - output hypothesis
