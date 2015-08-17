@@ -8,34 +8,31 @@
     - data + output = program
 
 - components of machine learning
+    
     - representation
+        - decision trees
+        - sets of rules
+        - instances
+        - graphical models
+        - neural networks
+        - support vector machines
+        - model ensembles
+    
     - evaluation
+        - accuracy
+        - precision and recall
+        - squared error
+        - likelihood
+        - posterior probability
+        - cost / utility
+        - margin
+        - entropy
+        - k-l divergence
+
     - optimization
-
-- representation
-    - decision trees
-    - sets of rules
-    - instances
-    - graphical models
-    - neural networks
-    - support vector machines
-    - model ensembles
-
-- evaluation
-    - accuracy
-    - precision and recall
-    - squared error
-    - likelihood
-    - posterior probability
-    - cost / utility
-    - margin
-    - entropy
-    - k-l divergence
-
-- optimization
-    - combinatorial (greedy search)
-    - convex (gradient descent)
-    - constrained (linear programming)
+        - combinatorial (greedy search)
+        - convex (gradient descent)
+        - constrained (linear programming)
 
 - types of learning
     - supervised learning
@@ -63,7 +60,7 @@
 ## key concepts
 
 - training examples
-    - an example of the form <x, f(x)>
+    - an example of the form (x, f(x))
 
 - target function
     - the true function f
@@ -77,7 +74,7 @@
 
 - classifier
     - a discrete-valued function
-    - classes or labels
+    - output also known as class or label
 
 - hypothesis spaces
     - the space of all hypothesis that can be output by the learning algorithm
@@ -110,7 +107,7 @@
         - must be found with combinatorial search methods
 
     - continuous
-        - continuous must be found by numerical seach methods
+        - must be found by numerical search methods
 
     - mixed
         - symbolic (discrete) and continuous
@@ -136,8 +133,8 @@
         - analyze training data and construct an explicit hypothesis
 
     - lazy
-        - store training data util test data point is presented
-        - construct ad-hoc hypothesis to classifiy that data point
+        - store training data until test data point is presented
+        - construct ad-hoc hypothesis to classify that data point
 
 - online vs. batch
 
@@ -154,7 +151,7 @@
 
 ## ml in practice
 
-- pipeline
+- machine learning pipeline
     - understanding domain, prior knowledge and goals
     - data integration, selection, cleaning, pre-processing
     - learn models
@@ -162,7 +159,7 @@
     - consolidate and deploy
     - loop
 
-- key issues
+- key issues in machine learning
     - what are good hypothesis spaces
     - what algorithms can work with these spaces
     - how optimize accuracy on future data points (overfitting)
